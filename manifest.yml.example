@@ -1,0 +1,13 @@
+applications:
+- name: recipe-bot
+  buildpack: python_buildpack
+  memory: 256M
+  path: .
+  services:
+  - conversation
+  - cloudant-nosql-db
+  env:
+    WORKSPACE_ID:
+    VERIFY_TOKEN:
+    PAGE_ACCESS_TOKEN:
+    SPOONACULAR_KEY:

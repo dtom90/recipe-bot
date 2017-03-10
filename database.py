@@ -15,7 +15,8 @@ else:
 
 def init_db():
     couch = get_couch()
-    couch.create('recipe_bot')
+    if 'recipe_bot' not in couch:
+        couch.create('recipe_bot')
     print 'Initialized the database.'
 
 
@@ -30,3 +31,5 @@ def print_database():
     db = couch['recipe_bot']
     for doc_id in db:
         print db[doc_id]
+
+init_db()

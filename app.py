@@ -4,8 +4,6 @@ import json
 
 import requests
 from flask import Flask, request, g
-from couchdb import ResourceNotFound
-from cloudant.document import Document
 from database import get_couch
 
 from watson_developer_cloud import ConversationV1
